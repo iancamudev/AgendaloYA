@@ -1,28 +1,20 @@
-import { useEffect, useState } from 'react'
-
-type data = {
-	msg: string
-}
+import { Routes, Route } from "react-router-dom";
+import Landing from "./components/landing/Landing";
+import Login from "./components/Login";
+import Navbar from "./components/Navbar";
+import Register from "./components/Register";
 
 function App() {
-
-	const [data, setData] = useState<data>()
-
-	useEffect(() => {
-		fetch('http://localhost:3000')
-			.then(json => json.json())
-			.then(res => setData(res))
-	}, [])
-	
-	if (!data) return <div> Cargando... </div>
-
-	console.log(data)
-
-	return (
-		<div>
-			{data.msg}
-		</div>
-	)
+  return (
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
