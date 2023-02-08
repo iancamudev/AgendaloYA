@@ -1,15 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import logoAgya from "../assets/logoAgya.png";
 import logoChico from "../assets/logoChico.png";
 import useWindowSize from "../hooks/useWindowSize";
 
 const Navbar = () => {
   const { width } = useWindowSize();
+  const navigate = useNavigate();
+
   return (
     <div className="h-auto bg-salmon w-full flex flex-row p-4 items-center justify-between">
       {width && width > 440 ? (
-        <img src={logoAgya} className="h-8 " />
+          <img src={logoAgya} className="h-8 hover:scale-105 cursor-pointer" onClick={() => navigate('/')} />
       ) : (
         <img src={logoChico} className="w-8 " />
       )}

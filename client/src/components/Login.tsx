@@ -24,14 +24,14 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen w-full">
+    <div className="w-full">
       <img
         src={width && width > 800 ? Waves2 : Waves}
         alt=""
         className="absolute w-full h-auto"
       />
-      <body className="flex flex-row h-full justify-around items-center">
-        <div className="flex flex-col gap-4 h-screen mt-[45vh] justify-start">
+      <body className="flex flex-row h-[35rem] justify-around items-center">
+        <div className="flex flex-col gap-4 h-auto justify-start">
           <Link to="/">
             <IoIosArrowBack className="h-10 w-10 mb-8 cursor-pointer" />
           </Link>

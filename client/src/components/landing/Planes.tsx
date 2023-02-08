@@ -39,7 +39,7 @@ const Planes = () => {
           <button
             className={`font-bold text-lg ${
               width && width > 600 && "self-start"
-            } text-salmon p-2 px-4 bg-white rounded-3xl duration-300 hover:duration-300 hover:bg-salmon hover:text-white`}
+            } text-salmon p-2 px-4 bg-white rounded-3xl hover:outline duration-300 hover:duration-300 hover:bg-salmon hover:text-white`}
           >
             EMPEZAR
           </button>

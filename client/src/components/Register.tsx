@@ -33,16 +33,16 @@ const Register = () => {
     }
   };
   return (
-    <div className="h-screen w-full">
+    <div className="w-full">
       <img
         src={width && width > 800 ? Waves2 : Waves}
         alt=""
         className="absolute w-full h-auto"
       />
-      <body className="flex flex-row h-full justify-around items-center">
-        <div className="flex flex-col gap-4 h-screen mt-[35vh] justify-start">
+      <body className="flex flex-row h-[35rem] justify-around items-center">
+        <div className="flex flex-col mt-4 gap-4 h-auto justify-start">
           <IoIosArrowBack
-            className="h-10 w-10 mb-8 cursor-pointer"
+            className="h-10 w-10 z-10 cursor-pointer"
             onClick={() => {
               navigate("/");
             }}
@@ -145,7 +145,7 @@ const Register = () => {
           ) : (
             <form
               action=""
-              className="flex flex-col gap-2  h-[236px] justify-center"
+              className="flex flex-col gap-2 h-[236px] justify-center"
               onSubmit={handleSubmit(submitHandler)}
             >
               <div className="flex flex-col items-start">
