@@ -6,6 +6,7 @@ import appRoutes from "./routes/app.routes";
 
 export const app: Express = express();
 
-app.use(appRoutes)
-app.use(cors<Request>())
-app.use(morgan('dev'))
+app.use(express.json());
+app.use(cors<Request>());
+app.use(morgan("dev"));
+app.use(appRoutes);
