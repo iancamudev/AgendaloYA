@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { colors } from "../../../utils/Variables";
+import { Stepper } from "@mui/material";
 
 export const FlexLayout = styled.div`
   display: flex;
@@ -14,20 +15,13 @@ export const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: center;
+
   width: 90%;
   max-width: 1000px;
-  height: 600px;
   background-color: ${colors.white};
 `;
 
-export const ContentDiv = styled.div`
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-`;
-
-export const StyledImg = styled.img`
-  max-width: 15rem;
+export const StyledStepper = styled(Stepper)<{ $width: number }>`
+  align-self: ${(props) => (props.$width > 600 ? "center" : "start")};
+  margin: 1rem 1rem 0 1rem;
 `;

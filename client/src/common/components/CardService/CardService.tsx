@@ -25,7 +25,7 @@ const CardService = ({ title, image, price }: CardServiceProps) => {
         <StyledPrice variant="h6">${price}</StyledPrice>
         <StyledTitle variant="body2">{title}</StyledTitle>
       </TextContainer>
-      <Button>Reservar</Button>
+      <Button onClick={() => setOpenModal(true)}>Ver mas</Button>
     </MainDiv>
   );
 };

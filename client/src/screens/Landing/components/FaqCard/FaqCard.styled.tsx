@@ -7,7 +7,7 @@ export const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 80%;
+  width: 90%;
   max-width: 700px;
   border-radius: 1rem;
   border: 1px solid #c0c0c0;
@@ -26,7 +26,8 @@ export const CustomQuestionIcon = styled(MdOutlineQuestionAnswer)`
 `;
 
 export const StyledTypography = styled(Typography)`
-  width: 85%;
+  width: 100%;
+  padding: 0 1rem;
 `;
 
 export const StyledArrow = styled(IoIosArrowDown)<{ $deploy: Boolean }>`

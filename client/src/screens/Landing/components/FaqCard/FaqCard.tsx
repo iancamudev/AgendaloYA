@@ -12,7 +12,7 @@ interface Faq {
   body: string;
 }
 
-const FaqCard = ({ title, body }: FaqProps) => {
+const FaqCard = ({ title, body }: Faq) => {
   const [deploy, setDeploy] = useState(false);
   return deploy ? (
     <MainDiv onClick={() => setDeploy(!deploy)}>
