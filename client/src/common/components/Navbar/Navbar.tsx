@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate, Link } from "react-router-dom";
-import logoAgya from "@assets/images/logoAgya.png";
 import logoChico from "@assets/images/logoChico.png";
 import useWindowSize from "@hooks/useWindowSize";
 import {
@@ -18,10 +17,7 @@ const Navbar = () => {
 
   return (
     <MainDiv>
-      <StyledLogo
-        src={width && width > 500 ? logoAgya : logoChico}
-        onClick={() => navigate("/")}
-      />
+      <StyledLogo src={logoChico} onClick={() => navigate("/")} />
 
       {width && width > 800 && (
         <NavigationContainer>
